@@ -1,8 +1,8 @@
 # vim: set sts=2 ts=8 sw=2 tw=99 et ft=python:
-builder.DetectCxx()
-if builder.cxx.like('msvc'):
-  builder.cxx.cxxflags += [ '/EHsc' ]
+cxx = builder.DetectCxx()
+if cxx.like('msvc'):
+  cxx.cxxflags += [ '/EHsc' ]
 
-program = builder.cxx.Program('test1')
+program = cxx.Program('test1')
 program.sources += [ 'main.cpp' ]
 builder.Add(program)
