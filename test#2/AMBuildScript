@@ -1,0 +1,13 @@
+# vim: set sts=2 ts=8 sw=2 tw=99 et ft=python:
+cxx = builder.DetectCxx()
+if cxx.like('msvc'):
+  cxx.cxxflags += [ '/EHsc' ]
+
+if builder.options.lobster is not None:
+  cxx.defines += ['LOBSTER_KING="{}"'.format(builder.options.lobster)]
+else:
+  cxx.defines += ['LOBSTER_KING=44']
+
+program = cxx.Program('test1')
+program.sources += [ 'main.cpp' ]
+builder.Add(program)
