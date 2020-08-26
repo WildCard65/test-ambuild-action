@@ -1,4 +1,4 @@
-name: "Test AMBuild Action"
+name: Test AMBuild Action
 on: push
 
 jobs:
@@ -17,6 +17,15 @@ jobs:
         run: |
           python -m pip install --upgrade pip setuptools
           pip install wheel
+        shell: bash
+      - name: Download AMBuild
+        uses: actions/checkout@v2
+        with:
+          repository: alliedmodders/ambuild
+          path: tools/ambuild
+          submodules: false
+      - name: Install AMBuild
+        run: pip install $GITHUB_WORKSPACE/tools/ambuild
         shell: bash
       - name: Build test#1
         uses: WildCard65/invoke-ambuild@master
@@ -40,6 +49,15 @@ jobs:
         run: |
           python -m pip install --upgrade pip setuptools
           pip install wheel
+        shell: bash
+      - name: Download AMBuild
+        uses: actions/checkout@v2
+        with:
+          repository: alliedmodders/ambuild
+          path: tools/ambuild
+          submodules: false
+      - name: Install AMBuild
+        run: pip install $GITHUB_WORKSPACE/tools/ambuild
         shell: bash
       - name: Build test#2
         uses: WildCard65/invoke-ambuild@master
@@ -75,6 +93,15 @@ jobs:
         run: |
           python -m pip install --upgrade pip setuptools
           pip install wheel
+        shell: bash
+      - name: Download AMBuild
+        uses: actions/checkout@v2
+        with:
+          repository: alliedmodders/ambuild
+          path: tools/ambuild
+          submodules: false
+      - name: Install AMBuild
+        run: pip install $GITHUB_WORKSPACE/tools/ambuild
         shell: bash
       - name: Build test#2
         uses: WildCard65/invoke-ambuild@master
