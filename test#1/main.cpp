@@ -1,6 +1,16 @@
 #include <iostream>
 
-int main() {
+void my_god_function(int my_value)
+{
+    std::cout << 'WE GOT A WARNING!' << std::endl;
+}
+
+int my_ufunc() { return 52; }
+
+int main()
+{
     std::cout << "Test 1 built without fail!" << std::endl;
+    my_god_function();
+
     return 0;
 }

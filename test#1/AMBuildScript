@@ -2,6 +2,8 @@
 cxx = builder.DetectCxx()
 if cxx.like('msvc'):
   cxx.cxxflags += [ '/EHsc' ]
+if cxx.like('gcc'):
+  cxx.cxxflags += ['-Wunused', '-Wall']
 
 program = cxx.Program('test1')
 program.sources += [ 'main.cpp' ]
