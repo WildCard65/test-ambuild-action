@@ -2,7 +2,7 @@
 
 void my_god_function(int my_value)
 {
-    std::cout << 'WE GOT A WARNING!' << std::endl;
+    std::cout << "WE GOT A WARNING!" << std::endl;
 }
 
 int my_ufunc() { return 52; }
