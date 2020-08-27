@@ -10,7 +10,7 @@ int my_ufunc() { return 52; }
 int main()
 {
     std::cout << "Test 1 built without fail!" << std::endl;
-    my_god_function();
+    my_god_function(72);
 
     return 0;
 }
