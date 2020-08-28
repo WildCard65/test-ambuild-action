@@ -4,6 +4,8 @@ on: push
 jobs:
   test_action_1:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
     strategy:
       matrix:
         python-version: [2.7, 3.8]
@@ -30,7 +32,6 @@ jobs:
       - name: Build test#1
         uses: WildCard65/invoke-ambuild@master
         with:
-          gh-token: ${{ secrets.GITHUB_TOKEN }}
           project-root: test#1
       - name: Run output
         run: build/test1/linux-x86_64/test1
@@ -63,7 +64,6 @@ jobs:
       - name: Build test#2
         uses: WildCard65/invoke-ambuild@master
         with:
-          gh-token: ${{ secrets.GITHUB_TOKEN }}
           project-root: test#2
           build-folder: binout
           configure-args: --lobster "Jeremy"
@@ -108,7 +108,6 @@ jobs:
       - name: Build test#3
         uses: WildCard65/invoke-ambuild@master
         with:
-          gh-token: ${{ secrets.GITHUB_TOKEN }}
           project-root: test#3
           build-folder: binout
           delete-build: true
