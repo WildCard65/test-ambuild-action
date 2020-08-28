@@ -1,7 +1,5 @@
 # vim: set sts=2 ts=8 sw=2 tw=99 et ft=python:
 cxx = builder.DetectCxx()
-if cxx.like('msvc'):
-  cxx.cxxflags += [ '/EHsc' ]
 if cxx.like('gcc'):
   cxx.cxxflags += ['-Wunused', '-Wall']
 
