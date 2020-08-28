@@ -109,6 +109,6 @@ jobs:
         uses: WildCard65/invoke-ambuild@master
         with:
           gh-token: ${{ secrets.GITHUB_TOKEN }}
-          project-root: test#1
+          project-root: test#3
           build-folder: binout
           delete-build: true
