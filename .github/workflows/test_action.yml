@@ -30,7 +30,7 @@ jobs:
         run: pip install $GITHUB_WORKSPACE/tools/ambuild
         shell: bash
       - name: Build test#1
-        uses: WildCard65/invoke-ambuild@master
+        uses: WildCard65/invoke-ambuild@novel-load
         with:
           project-root: test#1
       - name: Run output
@@ -62,7 +62,7 @@ jobs:
         run: pip install $GITHUB_WORKSPACE/tools/ambuild
         shell: bash
       - name: Build test#2
-        uses: WildCard65/invoke-ambuild@master
+        uses: WildCard65/invoke-ambuild@novel-load
         with:
           project-root: test#2
           build-folder: binout
@@ -106,7 +106,7 @@ jobs:
         run: pip install $GITHUB_WORKSPACE/tools/ambuild
         shell: bash
       - name: Build test#3
-        uses: WildCard65/invoke-ambuild@master
+        uses: WildCard65/invoke-ambuild@novel-load
         with:
           project-root: test#3
           build-folder: binout
