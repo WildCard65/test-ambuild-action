@@ -61,6 +61,7 @@ jobs:
         shell: bash
       - name: Build test#2
         uses: WildCard65/invoke-ambuild@master
+        continue-on-error: true
         with:
           project-root: test#2
           build-folder: binout
