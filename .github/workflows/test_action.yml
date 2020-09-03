@@ -30,6 +30,7 @@ jobs:
         shell: bash
       - name: Build test#1
         uses: WildCard65/invoke-ambuild@master
+        continue-on-error: true
         with:
           project-root: test#1
   test_action_2:
