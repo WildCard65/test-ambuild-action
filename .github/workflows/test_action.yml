@@ -33,9 +33,6 @@ jobs:
         continue-on-error: true
         with:
           project-root: test#1
-      - name: Run output
-        run: build/test1/linux-x86_64/test1
-        shell: bash
   test_action_2:
     runs-on: ubuntu-latest
     strategy:
