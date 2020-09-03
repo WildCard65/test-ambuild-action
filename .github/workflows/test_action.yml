@@ -28,9 +28,8 @@ jobs:
         run: pip install $GITHUB_WORKSPACE/tools/ambuild
         shell: bash
       - name: Build test#1
-        uses: WildCard65/invoke-ambuild@v2.0-cand
+        uses: WildCard65/invoke-ambuild@master
         with:
-          repository-token: ${{ secrets.GITHUB_TOKEN }}
           project-root: test#1
       - name: Run output
         run: build/test1/linux-x86_64/test1
@@ -61,9 +60,8 @@ jobs:
         run: pip install $GITHUB_WORKSPACE/tools/ambuild
         shell: bash
       - name: Build test#2
-        uses: WildCard65/invoke-ambuild@v2.0-cand
+        uses: WildCard65/invoke-ambuild@master
         with:
-          repository-token: ${{ secrets.GITHUB_TOKEN }}
           project-root: test#2
           build-folder: binout
           configure-args: --lobster "Jeremy"
@@ -106,9 +104,8 @@ jobs:
         run: pip install $GITHUB_WORKSPACE/tools/ambuild
         shell: bash
       - name: Build test#3
-        uses: WildCard65/invoke-ambuild@v2.0-cand
+        uses: WildCard65/invoke-ambuild@master
         with:
-          repository-token: ${{ secrets.GITHUB_TOKEN }}
           project-root: test#3
           build-folder: binout
           delete-build: true
