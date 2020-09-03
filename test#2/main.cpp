@@ -1,7 +1,5 @@
 #include <iostream>
 
-lobster;
-
 int main()
 {
     std::cout << "Test 2 built without fail!" << std::endl;
